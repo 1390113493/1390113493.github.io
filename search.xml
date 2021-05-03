@@ -8,7 +8,7 @@
       <link href="Coding/1c850176cba9.html"/>
       <url>Coding/1c850176cba9.html</url>
       
-        <content type="html"><![CDATA[<h2 id="目录管理"><a href="#目录管理" class="headerlink" title="目录管理"></a>目录管理</h2><h3 id="切换路径"><a href="#切换路径" class="headerlink" title="切换路径"></a>切换路径</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br></pre></td></tr></table></figure><ul><li>绝对路径</li></ul><p>路径全称，以<code>/</code>开头</p><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210503235324850.png" alt="image-20210503235324850"></p><ul><li>相对路径</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#96;&#96;&#96;cd ..&#96;&#96;&#96;：返回上一级目录</span><br><span class="line"></span><br><span class="line">![image-20210503234653170](..&#x2F;img&#x2F;image-20210503234653170.png)</span><br><span class="line"></span><br><span class="line">### 列出目录</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;bash</span><br><span class="line">ls</span><br></pre></td></tr></table></figure><ul><li><p>-a参数：all 查看所有文件（包括隐藏文件）</p></li><li><p>-l参数：所有文件信息（属性）</p></li></ul><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210503234910687.png" alt="image-20210503234910687"></p><p><strong>命令可以组合使用</strong></p><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210503235017941.png" alt="image-20210503235017941"></p><h3 id="显示用户所在目录"><a href="#显示用户所在目录" class="headerlink" title="显示用户所在目录"></a>显示用户所在目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210503235414005.png" alt="image-20210503235414005"></p><h3 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210503235548858.png" alt="image-20210503235548858"></p><ul><li><p>-p参数：递归创建</p><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210503235705143.png" alt="image-20210503235705143"></p></li></ul><h3 id="删除目录"><a href="#删除目录" class="headerlink" title="删除目录"></a>删除目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210504000136954.png" alt="image-20210504000136954"></p><p><strong>当目录不为空时，无法直接删除</strong></p><ul><li>-p参数：递归删除</li></ul><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210504000322174.png" alt="image-20210504000322174"></p><h3 id="复制文件-目录"><a href="#复制文件-目录" class="headerlink" title="复制文件/目录"></a>复制文件/目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp 原来的地方 新的地方</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210504001144789.png" alt="image-20210504001144789"></p><h3 id="移除文件或目录"><a href="#移除文件或目录" class="headerlink" title="移除文件或目录"></a>移除文件或目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm 移除文件或目录</span><br></pre></td></tr></table></figure><ul><li><p>-f参数：忽略不存在的文件，不会出现警告，强制删除</p></li><li><p>-r参数：递归删除目录</p></li><li><p>-i互动，删除询问是否删除</p><p>以下命令极其<strong>危险</strong>，不得尝试！</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /<span class="comment">#删除系统中所有文件</span></span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210504001736194.png" alt="image-20210504001736194"></p></li></ul><h3 id="移动文件或目录"><a href="#移动文件或目录" class="headerlink" title="移动文件或目录"></a>移动文件或目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv 移动文件或目录|重命名</span><br></pre></td></tr></table></figure><h4 id="移动文件"><a href="#移动文件" class="headerlink" title="移动文件"></a>移动文件</h4><ul><li>-f参数：强制</li><li>-u参数：只替换</li></ul><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210504002013686.png" alt="image-20210504002013686"></p><h4 id="重命名操作"><a href="#重命名操作" class="headerlink" title="重命名操作"></a>重命名操作</h4><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210504002114239.png" alt="image-20210504002114239"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="目录管理"><a href="#目录管理" class="headerlink" title="目录管理"></a>目录管理</h2><h3 id="切换路径"><a href="#切换路径" class="headerlink" title="切换路径"></a>切换路径</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br></pre></td></tr></table></figure><ul><li>绝对路径</li></ul><p>路径全称，以<code>/</code>开头</p><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210503235324850.png" alt="image-20210503235324850"></p><ul><li><p>相对路径</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  &#96;&#96;&#96;cd ..&#96;&#96;&#96;：返回上一级目录</span><br><span class="line"></span><br><span class="line">![image-20210503234653170](..&#x2F;img&#x2F;image-20210503234653170.png)</span><br><span class="line"></span><br><span class="line">### 列出目录</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;bash</span><br><span class="line">ls</span><br></pre></td></tr></table></figure></li><li><p>-a参数：all 查看所有文件（包括隐藏文件）</p></li><li><p>-l参数：所有文件信息（属性）</p></li></ul><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210503234910687.png" alt="image-20210503234910687"></p><p><strong>命令可以组合使用</strong></p><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210503235017941.png" alt="image-20210503235017941"></p><h3 id="显示用户所在目录"><a href="#显示用户所在目录" class="headerlink" title="显示用户所在目录"></a>显示用户所在目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210503235414005.png" alt="image-20210503235414005"></p><h3 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210503235548858.png" alt="image-20210503235548858"></p><ul><li><p>-p参数：递归创建</p><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210503235705143.png" alt="image-20210503235705143"></p></li></ul><h3 id="删除目录"><a href="#删除目录" class="headerlink" title="删除目录"></a>删除目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210504000136954.png" alt="image-20210504000136954"></p><p><strong>当目录不为空时，无法直接删除</strong></p><ul><li>-p参数：递归删除</li></ul><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210504000322174.png" alt="image-20210504000322174"></p><h3 id="复制文件-目录"><a href="#复制文件-目录" class="headerlink" title="复制文件/目录"></a>复制文件/目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp 原来的地方 新的地方</span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210504001144789.png" alt="image-20210504001144789"></p><h3 id="移除文件或目录"><a href="#移除文件或目录" class="headerlink" title="移除文件或目录"></a>移除文件或目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm 移除文件或目录</span><br></pre></td></tr></table></figure><ul><li><p>-f参数：忽略不存在的文件，不会出现警告，强制删除</p></li><li><p>-r参数：递归删除目录</p></li><li><p>-i互动，删除询问是否删除</p><p>以下命令极其<strong>危险</strong>，不得尝试！</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /<span class="comment">#删除系统中所有文件</span></span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210504001736194.png" alt="image-20210504001736194"></p></li></ul><h3 id="移动文件或目录"><a href="#移动文件或目录" class="headerlink" title="移动文件或目录"></a>移动文件或目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv 移动文件或目录|重命名</span><br></pre></td></tr></table></figure><h4 id="移动文件"><a href="#移动文件" class="headerlink" title="移动文件"></a>移动文件</h4><ul><li>-f参数：强制</li><li>-u参数：只替换</li></ul><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210504002013686.png" alt="image-20210504002013686"></p><h4 id="重命名操作"><a href="#重命名操作" class="headerlink" title="重命名操作"></a>重命名操作</h4><p><img src= "/img/loading.gif" data-lazy-src="../img/image-20210504002114239.png" alt="image-20210504002114239"></p>]]></content>
       
       
       <categories>
@@ -76,11 +76,11 @@
             
             <tag> Java </tag>
             
-            <tag> IDEA </tag>
-            
             <tag> MySQL </tag>
             
             <tag> Junit </tag>
+            
+            <tag> IDEA </tag>
             
             <tag> Maven </tag>
             
@@ -113,11 +113,11 @@
             
             <tag> Java </tag>
             
-            <tag> IDEA </tag>
-            
             <tag> MySQL </tag>
             
             <tag> Junit </tag>
+            
+            <tag> IDEA </tag>
             
             <tag> Maven </tag>
             
@@ -152,9 +152,9 @@
             
             <tag> Web </tag>
             
-            <tag> Tomcat </tag>
-            
             <tag> IDEA </tag>
+            
+            <tag> Tomcat </tag>
             
             <tag> 过滤器 </tag>
             
@@ -187,9 +187,9 @@
             
             <tag> Web </tag>
             
-            <tag> Tomcat </tag>
-            
             <tag> IDEA </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
@@ -218,9 +218,9 @@
             
             <tag> Web </tag>
             
-            <tag> Tomcat </tag>
-            
             <tag> IDEA </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
@@ -249,11 +249,11 @@
             
             <tag> Web </tag>
             
-            <tag> Tomcat </tag>
-            
             <tag> IDEA </tag>
             
             <tag> Maven </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
